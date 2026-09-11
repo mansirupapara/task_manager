@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager – Login</title>
+  <link rel="stylesheet" href="/static/css/auth.css">
+</head>
+<body>
+  <div class="card">
+    <h1>📝 Task Manager</h1>
+    <div class="tabs">
+      <button id="tab-login" class="active" onclick="switchTab('login')">Login</button>
+      <button id="tab-signup" onclick="switchTab('signup')">Sign Up</button>
+    </div>
+
+    <!-- Login form -->
+    <form id="login-form" onsubmit="login(event)">
+      <input name="username" placeholder="Username" required autocomplete="username">
+      <input name="password" type="password" placeholder="Password" required autocomplete="current-password">
+      <button class="submit" type="submit">Login</button>
+    </form>
+
+    <!-- Signup form -->
+    <form id="signup-form" class="hidden" onsubmit="signup(event)">
+      <input name="username" placeholder="Username" required minlength="3" autocomplete="username">
+      <input name="email" type="email" placeholder="Email" required autocomplete="email">
+      <input name="password" type="password" placeholder="Password (min 6)" required minlength="6" autocomplete="new-password">
+      <button class="submit" type="submit">Create Account</button>
+    </form>
+
+    <div id="msg" class="msg"></div>
+  </div>
+
+  <script src="/static/js/auth.js"></script>
+</body>
+</html>

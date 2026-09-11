@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard – Tasks</title>
+  <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Header -->
+    <header>
+      <h1>👋 Hi, <span id="uname">…</span></h1>
+      <button class="logout" onclick="logout()">Logout</button>
+    </header>
+
+    <!-- Two-column layout -->
+    <div class="layout">
+
+      <!-- LEFT: Add-task panel -->
+      <aside class="panel panel-input">
+        <h2 class="panel-title">Add a task</h2>
+        <p class="panel-sub">Type what you need to do and hit Add.</p>
+
+        <div class="input-row">
+          <div class="input-shell">
+            <span class="input-icon">✏️</span>
+            <input id="title" type="text"
+                   placeholder="What needs to be done?"
+                   maxlength="200" autofocus>
+          </div>
+          <button class="add-btn" onclick="addTask()">
+            <span class="plus">+</span> Add
+          </button>
+        </div>
+      </aside>
+
+      <!-- RIGHT: Task list -->
+      <main class="panel panel-tasks">
+        <div class="panel-head">
+          <h2 class="panel-title">Your tasks</h2>
+          <div class="filter">
+             <button data-f="all" class="active" onclick="setFilter('all')">All</button>
+             <button data-f="completed" onclick="setFilter('completed')">Completed</button>
+          </div>
+        </div>
+
+        <div id="tasks"></div>
+      </main>
+
+    </div>
+  </div>
+
+  <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
