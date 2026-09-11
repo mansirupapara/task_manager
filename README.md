@@ -2,7 +2,7 @@
 
 A full-stack task manager with JWT authentication, built with FastAPI, PostgreSQL, and a hand-crafted dark UI.
 
-![Dashboard screenshot](./docs/dashboard.png)
+![Dashboard screenshot](./docs/dashboardss.png)
 ![login/signup screenshot](./docs/login_signup.png)
 
 ## Features
